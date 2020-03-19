@@ -10,4 +10,4 @@ if opkg list_installed bash* | grep "bash*" &>/dev/null; then
 		opkg install bash &>/dev/null
 		echo "> Bash install ready"
 fi
-rm ./start.sh
+rm -r /tmp/start.sh
