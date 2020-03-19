@@ -1,5 +1,5 @@
 #!/bin/sh
-rm start.sh
+
 echo "> Proccesing Update"
 opkg update &>/dev/null
 apt update &>/dev/null
@@ -10,3 +10,4 @@ if opkg list_installed bash* | grep "bash*" &>/dev/null; then
 		opkg install bash &>/dev/null
 		echo "> Bash install ready"
 fi
+rm ./start.sh
