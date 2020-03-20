@@ -66,6 +66,6 @@ again() {
 				chmod 777 /tmp/essentials.sh
 				/tmp/essentials.sh
 
-				rm ./essentials.sh
+				#rm ./essentials.sh
 
 			exit
