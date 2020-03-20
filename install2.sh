@@ -13,70 +13,70 @@ again() {
 	read  LANG
 	if [ "$LANG" = 1 ] || [ "$LANG" = 2 ] || [ "$LANG" = 3 ] || [ "$LANG" = 4 ] || [ "$LANG" = 5 ] || [ "$LANG" = 0 ];
 		then
-			if (( $LANG == 1));
+		if (( $LANG == 1));
+			then
+				LANGUAGE="nl"
+				echo -e "\n \e[1;33mGekozen taal is Nederlands\e[0m"
+			fi
+			if (( $LANG == 2));
+			then
+				LANGUAGE="it"
+				echo -e "\n \e[33mAvete scelto la lingua Italiana\e[0m"
+			fi
+			if (( $LANG == 3));
+			then
+				LANGUAGE="en"
+				echo -e "\n \e[33mEnglish is choosen as Language\e[0m"
+			fi
+			if (( $LANG == 4));
 				then
-					LANGUAGE="nl"
-					echo -e "\n \e[1;33mGekozen taal is Nederlands\e[0m"
+					LANGUAGE="fr"
+					echo -e "\n \e[33mLe francais est choisi comme langue\e[0m"
+			fi
+			if (( $LANG == 5));
+				then
+					LANGUAGE="fr"
+					echo -e "\n \e[33mAls Sprache wird Deutsch gewahlt\e[0m"
+			fi
+				if (( $LANG == 0));
+				then
+					echo -e "\n"
+					exit
 				fi
-				if (( $LANG == 2));
-					then
-						LANGUAGE="it"
-						echo -e "\n \e[33mAvete scelto la lingua Italiana\e[0m"
-					fi
-					if (( $LANG == 3));
-						then
-							LANGUAGE="en"
-							echo -e "\n \e[33mEnglish is choosen as Language\e[0m"
-						fi
-						if (( $LANG == 4));
-							then
-								LANGUAGE="fr"
-								echo -e "\n \e[33mLe francais est choisi comme langue\e[0m"
-							fi
-							if (( $LANG == 5));
-								then
-									LANGUAGE="fr"
-									echo -e "\n \e[33mAls Sprache wird Deutsch gewahlt\e[0m"
-								fi
-								if (( $LANG == 0));
-									then
-										echo -e "\n"
-									exit
-								fi
-							else
-							echo -e "\n  \e[41mERROR\e[0m"
-							sleep 1
-						fi
-					}
-					LANG="7"
-					while [ "$LANG" != 1 ] && [ "$LANG" != 2 ] && [ "$LANG" != 3 ] && [ "$LANG" != 4 ] && [ "$LANG" != 5 ] && [ "$LANG" != 0 ]
-						do
-							clear
-							again
-						done
+			else
+					echo -e "\n  \e[41mERROR\e[0m"
+					sleep 1
+			fi
+			}
+			LANG="7"
+			while [ "$LANG" != 1 ] && [ "$LANG" != 2 ] && [ "$LANG" != 3 ] && [ "$LANG" != 4 ] && [ "$LANG" != 5 ] && [ "$LANG" != 0 ]
+			do
+			clear
+			again
+			done
 
-						installpath=/etc/LANG
-						.  ${installpath}/$LANGUAGE.sh
+			installpath=/etc/lang
+			.  ${installpath}/$LANGUAGE.sh
 
-						mkdir /usr/share/info/ &>/dev/null
-						echo "$LANGUAGE" > /tmp/locale.txt
+			mkdir /usr/share/info/ &>/dev/null
+			echo "$LANGUAGE" > /tmp/locale.txt
 
-						echo -e "\e[1;33m$BASHCEHK\e[1;0m"
-						echo -e ""
-						opkg update  &>/dev/null
-						apt update &>/dev/null
-						echo -e "$UPDATELIBSSUCCES"
-						if opkg list_installed bash* | grep "bash*" &>/dev/null; then
-							echo -e "\e[1;32m$BASHPRESENT \e[1;0m"
-						else
-						opkg install bash &>/dev/null
-						echo -e "\e[1;33m$BASHINSTALL\e[1;0m"
-					fi
-					sleep 3
-					wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/essentials.sh -O /tmp/essentials.sh
-					chmod 777 /tmp/essentials.sh
-					/etc/enigma2/essentials.sh
+			echo -e "\e[1;33m$BASHCEHK\e[1;0m"
+			echo -e ""
+			opkg update  &>/dev/null
+			apt update &>/dev/null
+			echo -e "$UPDATELIBSSUCCES"
+			if opkg list_installed bash* | grep "bash*" &>/dev/null; then
+				echo -e "\e[1;32m$BASHPRESENT \e[1;0m"
+			else
+				opkg install bash &>/dev/null
+				echo -e "\e[1;33m$BASHINSTALL\e[1;0m"
+			fi
+			sleep 3
+				wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/essentials.sh -O /tmp/essentials.sh
+				chmod 777 /tmp/essentials.sh
+				/etc/enigma2/essentials.sh
 
-					rm ./essentials.sh
+				rm ./essentials.sh
 
-				exit
+			exit
