@@ -80,7 +80,7 @@ again() {
 			sleep 3
 				wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/essentials.sh -O /tmp/essentials.sh
 				chmod 777 /tmp/essentials.sh
-				/tmp/enigma2/essentials.sh
+				/tmp/essentials.sh
 
 				rm ./essentials.sh
 
