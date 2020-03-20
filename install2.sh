@@ -55,7 +55,7 @@ again() {
 			again
 			done
 
-			installpath=/etc/lang
+			installpath=/tmp/lang
 			.  ${installpath}/$LANGUAGE.sh
 
 			mkdir /usr/share/info/ &>/dev/null
@@ -75,7 +75,7 @@ again() {
 			sleep 3
 				wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/essentials.sh -O /tmp/essentials.sh
 				chmod 777 /tmp/essentials.sh
-				/etc/enigma2/essentials.sh
+				/tmp/enigma2/essentials.sh
 
 				rm ./essentials.sh
 
