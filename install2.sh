@@ -1,5 +1,10 @@
 #!/bin/sh
-
+wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/nl.sh -O /tmp/nl.sh
+mkdir /tmp/lang &>/dev/null
+mv /tmp/nl.sh /tmp/lang/
+chmod 777 /tmp/lang/nl.sh
+wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/functions.sh -O /tmp/functions.sh
+chmod 777 /tmp/functions.sh
 rm /tmp/locale.txt
 again() {
 	echo "Step 1"
