@@ -8,7 +8,7 @@ chmod 777 /tmp/functions.sh
 
 
 LANGUAGE=$( cat /tmp/locale.txt )
-installpath=/etc/enigma2/lang
+installpath=/tmp/lang
 .  ${installpath}/$LANGUAGE.sh
 FUNTIONPATH=/tmp
 .  ${FUNTIONPATH}/functions.sh
