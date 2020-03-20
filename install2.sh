@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo " Refreshing OPKG Update"
+echo "> Refreshing OPKG Update"
 opkg update
 again() {
 	echo "Step 1"
