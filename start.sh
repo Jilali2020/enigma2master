@@ -20,5 +20,5 @@ chmod 777 /tmp/functions.sh
 rm /tmp/locale.txt
 wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/install2.sh -O /tmp/install2.sh
 chmod 777 /tmp/install2.sh
-rm -r /tmp/start.sh
+#rm -r /tmp/start.sh
 bash /tmp/install2.sh
