@@ -44,7 +44,7 @@ function openpli(){
 		
 	fi
 		ntpdate fr.pool.ntp.org &>/dev/null
-		echo "$NTPTOSTARTUP"
+		echo -e "$NTPTOSTARTUP"
 		wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/ntp.sh -O /tmp/ntp.sh
 		cp /tmp/ntp.sh /etc/init.d/ntp.sh
 		rm -f /tmp/ntp.sh
