@@ -12,7 +12,7 @@ BASHINSTALL=" Geen Bash gevonden , begin met installatie."
 BASHPRESENT=" Bash aanwezig, installatie onnodig.\n"
 HEADPAGE2="         INSTALLATIE VAN NODIGE PAKKETTEN       "
 READSPECS=" \e[1;36mEven geduld, ophalen van de nodige informatie\e[1;0m"
-SPECRESULTS="  \e[0mOntvanger \e[1m$ONTVANGER \e[0mgevonden met image \e[1m$IMAGE $E2VERSION \e[0mop ipadres \e[1m$IPADRES \e[0m"
+SPECRESULTS="  \e[0mOntvanger \e[1m$ONTVANGER \e[0mgevonden met image \e[1m$IMAGE $E2VERSION \e[0mipadres: \e[1m$IPADRES \e[0m"
 #Step 2
 CRONVERSIE=$( opkg list_installed *cron* )
 CRONCHECK="  Installatie Cron...\e[1;36m[1/5]\e[1;0m"
