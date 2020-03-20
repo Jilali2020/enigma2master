@@ -57,20 +57,10 @@ again() {
 			installpath=/tmp/lang
 			.  ${installpath}/$LANGUAGE.sh
 
-			mkdir /usr/share/info/ &>/dev/null
 			echo "$LANGUAGE" > /tmp/locale.txt
 
 			echo -e "\e[1;33m$BASHCEHK\e[1;0m"
 			echo -e ""
-			opkg update  &>/dev/null
-			apt update &>/dev/null
-			echo -e "$UPDATELIBSSUCCES"
-			if opkg list_installed bash* | grep "bash*" &>/dev/null; then
-				echo -e "\e[1;32m$BASHPRESENT \e[1;0m"
-			else
-				opkg install bash &>/dev/null
-				echo -e "\e[1;33m$BASHINSTALL\e[1;0m"
-			fi
 			sleep 3
 				wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/essentials.sh -O /tmp/essentials.sh
 				chmod 777 /tmp/essentials.sh
