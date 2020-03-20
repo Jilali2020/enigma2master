@@ -7,6 +7,7 @@ IPADRES=$(awk -F'[<>]' '/<e2lanip>/{print $3}' /tmp/about.txt )
 E2VERSION=$(awk -F'[<>]' '/<e2imageversion>/{print $3}' /tmp/about.txt )
 UPDATELIBSSUCCES="\e[1;36m LINUX Pakketten met succes geupdated"
 BASHCEHK=" Even Geduld .. Bash versie controle."
+DOWNLOADWAIT="Download van nodige bestanden.\n"
 BASHINSTALL=" Geen Bash gevonden , begin met installatie."
 BASHPRESENT=" Bash aanwezig, installatie onnodig.\n"
 HEADPAGE2="         INSTALLATIE VAN NODIGE PAKKETTEN       "
