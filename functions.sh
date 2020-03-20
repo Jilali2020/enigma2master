@@ -17,11 +17,6 @@ function openpli(){
 		echo -e "$CRONINSTALL"
 		opkg install cron &>/dev/null
 		opkg install busybox-cron &>/dev/null
-		sleep 3
-		if opkg list_installed *cron* | grep "cron*" &>/dev/null
-		then
-			echo -e "$CRONRECHECK"
-		fi
 	fi	
 	
 	#
@@ -66,5 +61,9 @@ function openpli(){
 			else
 					echo -e "$PYTHONARGINSTALL"
 					opkg install python-image python-imaging python-argparse &>/dev/null					
+			fi
+			if opkg list-installed *cron* | grep "cron*" &>/dev/null
+			then
+				echo -e "$CRONRECHECK"
 			fi
 }
