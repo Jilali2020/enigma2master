@@ -20,7 +20,7 @@ function openpli(){
 		sleep 3
 		if opkg list_installed *cron* | grep "cron*" &>/dev/null
 		then
-			echo -e "$CRONPRESENT2"
+			echo -e "$CRONRECHECK"
 		fi
 	fi	
 	
