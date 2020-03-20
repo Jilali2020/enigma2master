@@ -17,12 +17,11 @@ function openpli(){
 		echo -e "$CRONINSTALL"
 		opkg install cron &>/dev/null
 		opkg install busybox-cron &>/dev/null
-	fi	
-	if opkg list-installed *cron* | grep "cron*" &>/dev/null
+		if opkg list-installed *cron* | grep "cron*" &>/dev/null
 			then
 				testremote $(opkg list_installed *cron*)
 			fi
-	
+	fi	
 	#
 	# CURL
 	CURLVERSIE=$( opkg list_installed curl* )
