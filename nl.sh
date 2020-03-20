@@ -18,11 +18,9 @@ CRONVERSIE=$( opkg list_installed *cron* )
 CRONCHECK="  Installatie Cron...\e[1;36m[1/5]\e[1;0m"
 CRONPRESENT="\e[1m  Versie $CRONVERSIE is al \e[32mgeinstalleerd! \e[32m[\e[32m1\e[32m/\e[32m5]\e[0m\n"
 CRONNAINSTALL=$( opkg list-installed *cron* )
-function testremote() {
-      echo -e "  \e[1mCron Versie \e[32m$1\e[1m Is correct geinstalleerd.\e[0m" 
-}
+function testremote() { echo -e "  \e[1mCron Versie\e[32m $1 \e[1;0mIs correct geinstalleerd.\e[0m\n" }
 CRONRECHECK="\e[1m  Controle versie $CRONNAINSTALL is correct \e[32mgeinstalleerd! \e[32m[\e[32m1\e[32m/\e[32m5]\e[0m\n"
-CRONINSTALL="\e[1m  Cron niet \e[31maanwezig! \e[0mWordt nu installeerd!!\n"
+CRONINSTALL="\e[1m  Cron niet \e[31maanwezig! \e[0mWordt nu installeerd!!"
 CURLVERSIE=$( opkg list_installed curl* )
 CURLCHECK="\e[0m  Installatie Curl...\e[1;36m[2/5]\e[1;0m"
 CURLPRESENT="  \e[1mVersie $CURLVERSIE is al \e[32mgeinstalleerd!\e[32m[\e[32m2\e[32m/\e[32m5]\e[0m\n"
