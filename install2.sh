@@ -17,7 +17,11 @@ again() {
 		if (( $LANG == 1));
 			then
 				LANGUAGE="nl"
-				echo -e "\n \e[1;33mGekozen taal is Nederlands\e[0m"
+				echo -e "\n \e[1;33mGekozen taal is Nederlands, en wordt nu gedownload!\e[0m"
+				wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/nl.sh -O /tmp/nl.sh
+				mkdir /tmp/lang &>/dev/null
+				mv /tmp/nl.sh /tmp/lang/
+				chmod 777 /tmp/lang/nl.sh
 			fi
 			if (( $LANG == 2));
 			then
