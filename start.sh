@@ -11,4 +11,7 @@ if opkg list_installed bash* | grep "bash*" &>/dev/null; then
 		opkg install bash &>/dev/null
 		echo "> Bash install ready"
 fi
+wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/essentials.sh -O /tmp/essentials.sh
+chmod 777 /tmp/essentials.sh
 rm -r /tmp/start.sh
+bash /tmp/essentials.sh
