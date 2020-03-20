@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo " Refreshing OPKG Update"
+opkg update
 again() {
 	echo "Step 1"
 	echo -e "\e[1m===================================================="
