@@ -7,10 +7,10 @@ wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/functi
 chmod 777 /tmp/functions.sh
 
 
-LANGUAGE=$( cat /usr/share/info/locale.txt )
+LANGUAGE=$( cat /tmp/locale.txt )
 installpath=/etc/enigma2/lang
 .  ${installpath}/$LANGUAGE.sh
-FUNTIONPATH=/usr/share/info
+FUNTIONPATH=/tmp
 .  ${FUNTIONPATH}/functions.sh
 
 clear
