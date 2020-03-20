@@ -31,4 +31,4 @@ NOWKLOK="  \e[1mSysteem EPG klok ingesteld op: \e[33m$NU\e[0m\n"
 PYTHONARG=$( opkg list_installed python-argpars*)
 PYTHONARGCHECK="  Installatie Python Args...\e[1;36m[4/5]\e[1;0m"
 PYTHONARGPRESENT="  \e[1mVersie $PYTHONARG is al \e[32mgeinstalleerd!\e[32m[\e[32m4\e[32m/\e[32m5]\e[0m"
-PYTHONARGINSTALL="   \e[1mInstallatie $PYTHONARG gestart\e[32m[\e[32m5\e[32m/\e[32m5]\e[0m\n"
+PYTHONARGINSTALL="  \e[1mPython Args niet \e[31maanwezig!\e[0m .Wordt nu installeerd! \e[32m[\e[32m5\e[32m/\e[32m5]\e[0m\n"
