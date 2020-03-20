@@ -59,7 +59,6 @@ again() {
 
 			echo "$LANGUAGE" > /tmp/locale.txt
 			echo -e ""
-			sleep 3
 				wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/essentials.sh -O /tmp/essentials.sh
 				chmod 777 /tmp/essentials.sh
 				/tmp/essentials.sh
