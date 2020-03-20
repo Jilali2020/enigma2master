@@ -26,6 +26,7 @@ KLOKVERSIE=$( opkg list_installed ntpdate* )
 KLOKCHECK="  Installatie Ntpdate...\e[1;36m[3/5]\e[1;0m"
 KLOKPRESENT="  \e[1mVersie $KLOKVERSIE is al \e[32mgeinstalleerd!\e[32m[\e[32m3\e[32m/\e[32m5]\e[0m"
 KLOKINSTALL="  \e[1mSysteem EPG klok Installatie begonnen.\e[0m"
+NTPTOSTARTUP="  \e[1mSysteemklok wordt aan Linux Opstart toegevoegd!\e[0m"
 NU=$(date) &> /dev/null
 NOWKLOK="  \e[1mSysteem EPG klok ingesteld op: \e[33m$NU\e[0m\n"
 PYTHONARG=$( opkg list_installed python-argpars*)
