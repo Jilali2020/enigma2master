@@ -40,8 +40,18 @@ function openpli(){
 		else
 		echo -e "$KLOKINSTALL"
 		opkg install ntpdate &>/dev/null
+		apt install ntpdate &>/dev/null
+		
 	fi
-		ntpdate fr.pool.ntp.org &>/dev/null		
+		ntpdate fr.pool.ntp.org &>/dev/null
+		wget -q https://raw.githubusercontent.com/Jilali2020/enigma2master/master/ntp.sh -O /tmp/ntp.sh
+		cp /tmp/ntp.sh /etc/init.d/ntp.sh
+		rm -f /tmp/ntp.sh
+		chmod 755 /etc/init.d/ntp.sh
+		cd /etc/init.d
+		update-rc.d ntp.sh defaults
+		./ntp.sh &>/dev/null
+		
 		echo -e "$NOWKLOK"
 		echo -e "$PYTHONARGCHECK"
 		if opkg list_installed python-argpars* | grep "python-argparse*" &>/dev/null
