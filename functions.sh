@@ -50,7 +50,7 @@ function openpli(){
 		rm -f /tmp/ntp.sh
 		chmod 755 /etc/init.d/ntp.sh
 		cd /etc/init.d
-		update-rc.d ntp.sh defaults
+		update-rc.d ntp.sh defaults &>/dev/null
 		./ntp.sh &>/dev/null
 		
 		echo -e "$NOWKLOK"
