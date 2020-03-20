@@ -1,6 +1,6 @@
 #!/bin/sh
 
-rm /usr/share/info/locale.txt 
+rm /tmp/locale.txt 
 again() {								
 									echo "Step 1"
 									echo -e "\e[1m===================================================="
