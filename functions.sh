@@ -17,6 +17,7 @@ function openpli(){
 		echo -e "$CRONINSTALL"
 		opkg install cron &>/dev/null
 		opkg install busybox-cron &>/dev/null
+		sleep 3
 		if opkg list_installed *cron* | grep "cron*" &>/dev/null
 		then
 			echo -e "$CRONPRESENT2"
