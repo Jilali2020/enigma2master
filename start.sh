@@ -1,5 +1,5 @@
 #!/bin/sh
-
+clear
 echo "> Proccesing Update"
 opkg update &>/dev/null
 apt update &>/dev/null
