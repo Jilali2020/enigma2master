@@ -19,7 +19,7 @@ function openpli(){
 		opkg install busybox-cron &>/dev/null
 		if opkg list-installed *cron* | grep "cron*" &>/dev/null
 			then
-				testremote $(opkg list_installed *cron*)
+				testcronremote $(opkg list_installed *cron*)
 			fi
 	fi	
 	#
