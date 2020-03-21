@@ -32,6 +32,10 @@ function openpli(){
 		else
 		echo -e "$CURLINSTALL"
 		opkg install curl &>/dev/null
+		if  opkg list_installed *curl* | grep "curl*" &>/dev/null
+			then
+				testcurlremote $(opkg list_installed *curl*)
+			fi
 	fi
 	#
 	# RDATE
