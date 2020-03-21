@@ -2,4 +2,4 @@
 Scripting
 
 Coronavirus kept me at home, made this helper.
-hi 2
+hi 23
