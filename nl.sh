@@ -19,7 +19,7 @@ CRONCHECK="  Installatie Cron...\e[1;36m[1/5]\e[1;0m"
 CRONPRESENT="\e[1m  Versie $CRONVERSIE is al \e[32mgeinstalleerd! \e[32m[\e[32m1\e[32m/\e[32m5]\e[0m\n"
 CRONNAINSTALL=$( opkg list-installed *cron* )
 function testcronremote() { 
-            echo " $( opkg list-installed *cron* | grep "*cron -" )
+            echo " $( opkg list-installed *cron* | grep "*cron -" ) "
  
 }
 CRONRECHECK="\e[1m  Controle versie $CRONNAINSTALL is correct \e[32mgeinstalleerd! \e[32m[\e[32m1\e[32m/\e[32m5]\e[0m\n"
