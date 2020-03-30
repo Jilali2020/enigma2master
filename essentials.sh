@@ -65,3 +65,6 @@ E2VERSION=$(awk -F'[<>]' '/<e2imageversion>/{print $3}' /tmp/about.txt )
 if [ $IMAGE = "openpli" ]; then
 		openpli
 fi
+if [ $IMAGE = "openatv" ]; then
+		openpli
+fi
